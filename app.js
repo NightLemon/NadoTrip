@@ -2,7 +2,7 @@ const translations = {
   en: {
     navTrips: "Trips",
     navPlanner: "Planner",
-    navCheckout: "Checkout",
+    navCheckout: "Cart",
     heroEyebrow: "France travel marketplace",
     heroTitle: "NadoTrip",
     heroCopy: "Curated city breaks, food trails, coastal escapes, and private journeys across France.",
@@ -28,15 +28,15 @@ const translations = {
     cartEyebrow: "Trip cart",
     cartTitle: "Your selected products",
     cartCopy: "Add one or more travel products, adjust travelers and dates, then send the order intent.",
-    checkoutEyebrow: "Checkout",
-    checkoutTitle: "Confirm booking intent",
-    checkoutCopy: "For the MVP, checkout records a qualified order instead of charging payment.",
+    checkoutEyebrow: "Booking",
+    checkoutTitle: "Request your trip",
+    checkoutCopy: "Send your booking request and we'll get back to you within 24 hours to confirm dates, pricing, and any custom needs — no payment is taken yet.",
     formName: "Name",
     formEmail: "Email",
     formNotes: "Notes",
     formNotesPlaceholder: "Hotel level, dietary needs, pickup city, timing constraints",
-    formSubmit: "Submit booking intent",
-    formSuccess: "Booking intent saved locally with your selected products.",
+    formSubmit: "Send booking request",
+    formSuccess: "Request received — we'll reply within 24 hours.",
     details: "View details",
     backToTrips: "Back to trips",
     addToCart: "Add to cart",
@@ -56,57 +56,78 @@ const translations = {
     subtotal: "Subtotal",
     checkoutEmpty: "Add a product before submitting checkout.",
     footerCopy: "France travel sales MVP for web, tablet, and mobile.",
+    priceIncludesTitle: "What's included in the price",
+    priceIncludes: [
+      "Twin-share accommodation in selected hotels",
+      "Guided experiences and entrance tickets listed in the itinerary",
+      "Local SIM tips and 24/7 WhatsApp support during the trip",
+    ],
+    priceExcludesTitle: "Not included",
+    priceExcludes: [
+      "International flights and travel insurance",
+      "Meals not listed in the itinerary",
+      "Optional add-ons and personal expenses",
+    ],
+    cancellationTitle: "Free cancellation policy",
+    cancellationCopy: "Cancel up to 14 days before departure for a full refund. 7–14 days: 50% refund. Under 7 days: non-refundable.",
+    reviewsTitle: "Traveler reviews",
+    seeAllReviews: "Read more reviews",
+    galleryLabel: "Photo gallery",
+    addedToast: "Added to cart",
+    viewCart: "View cart",
+    ratingLabel: "rating",
+    reviewsShort: "reviews",
   },
   fr: {
     navTrips: "Voyages",
-    navPlanner: "Itineraires",
-    navCheckout: "Commande",
-    heroEyebrow: "Place de marche du voyage en France",
+    navPlanner: "Itinéraires",
+    navCheckout: "Panier",
+    heroEyebrow: "Place de marché du voyage en France",
     heroTitle: "NadoTrip",
-    heroCopy: "Sejours urbains, routes gourmandes, escapades mer et voyages prives partout en France.",
+    heroCopy: "Séjours urbains, routes gourmandes, escapades mer et voyages privés partout en France.",
     heroPrimary: "Voir les voyages",
-    heroSecondary: "Creer mon trajet",
-    statOneValue: "Instantane",
+    heroSecondary: "Créer mon trajet",
+    statOneValue: "Instantané",
     statOneLabel: "estimation panier",
     statTwoValue: "2",
     statTwoLabel: "langues",
     statThreeValue: "6",
-    statThreeLabel: "produits reservables",
+    statThreeLabel: "produits réservables",
     tripsEyebrow: "Catalogue",
     tripsTitle: "Trouver le bon produit France",
-    tripsCopy: "Ouvrez une fiche produit, consultez l'itineraire, choisissez date et voyageurs, puis ajoutez au panier.",
+    tripsCopy: "Ouvrez une fiche produit, consultez l'itinéraire, choisissez date et voyageurs, puis ajoutez au panier.",
     filterAll: "Tout",
     filterCity: "Ville",
     filterFood: "Gastronomie",
     filterCoast: "Littoral",
     filterFamily: "Famille",
-    filterPrivate: "Prive",
-    plannerEyebrow: "Routes conseillees",
-    plannerTitle: "Trois facons rapides de vendre la France",
+    filterPrivate: "Privé",
+    plannerEyebrow: "Routes conseillées",
+    plannerTitle: "Trois façons rapides de vendre la France",
     cartEyebrow: "Panier voyage",
-    cartTitle: "Vos produits selectionnes",
+    cartTitle: "Vos produits sélectionnés",
     cartCopy: "Ajoutez un ou plusieurs produits, ajustez voyageurs et dates, puis envoyez l'intention de commande.",
-    checkoutEyebrow: "Commande",
-    checkoutTitle: "Confirmer l'intention de reservation",
-    checkoutCopy: "Dans ce MVP, la commande enregistre un dossier qualifie sans paiement en ligne.",
+    checkoutEyebrow: "Réservation",
+    checkoutTitle: "Confirmer votre réservation",
+    checkoutCopy: "Pour cette version MVP, nous enregistrons votre demande et vous contacterons sous 24h sans débit immédiat.",
     formName: "Nom",
     formEmail: "E-mail",
     formNotes: "Notes",
-    formNotesPlaceholder: "Niveau d'hotel, regimes alimentaires, ville de depart, contraintes horaires",
-    formSubmit: "Envoyer l'intention de commande",
-    formSuccess: "Intention de reservation enregistree localement avec vos produits.",
-    details: "Voir details",
+    formNotesPlaceholder: "Niveau d'hôtel, régimes alimentaires, ville de départ, contraintes horaires",
+    formSubmit: "Envoyer ma demande",
+    formSuccess: "Demande enregistrée, nous vous répondons sous 24h.",
+    details: "Voir détails",
     backToTrips: "Retour aux voyages",
     addToCart: "Ajouter au panier",
-    inCart: "Ajoute au panier",
-    itinerary: "Itineraire",
-    from: "Des",
+    inCart: "Ajouté au panier",
+    itinerary: "Itinéraire",
+    from: "Dès",
     perPerson: "par personne",
     days: "jours",
     day: "Jour",
     includes: "Inclus",
     options: "Options",
-    startDate: "Date de depart",
+    startDate: "Date de départ",
     travelers: "Voyageurs",
     estimate: "Estimation",
     cartEmpty: "Votre panier est vide. Ouvrez une fiche produit pour ajouter un voyage.",
@@ -114,6 +135,27 @@ const translations = {
     subtotal: "Sous-total",
     checkoutEmpty: "Ajoutez un produit avant de valider la commande.",
     footerCopy: "MVP de vente de voyages en France pour web, tablette et mobile.",
+    priceIncludesTitle: "Ce qui est inclus dans le prix",
+    priceIncludes: [
+      "Hébergement en chambre double dans les hôtels sélectionnés",
+      "Expériences guidées et billets d'entrée listés dans l'itinéraire",
+      "Conseils SIM locale et support WhatsApp 24/7 pendant le voyage",
+    ],
+    priceExcludesTitle: "Non inclus",
+    priceExcludes: [
+      "Vols internationaux et assurance voyage",
+      "Repas non listés dans l'itinéraire",
+      "Options supplémentaires et dépenses personnelles",
+    ],
+    cancellationTitle: "Annulation gratuite",
+    cancellationCopy: "Annulation gratuite jusqu'à 14 jours avant le départ. 7 à 14 jours : remboursement 50%. Moins de 7 jours : non remboursable.",
+    reviewsTitle: "Avis voyageurs",
+    seeAllReviews: "Voir plus d'avis",
+    galleryLabel: "Galerie photos",
+    addedToast: "Ajouté au panier",
+    viewCart: "Voir le panier",
+    ratingLabel: "note",
+    reviewsShort: "avis",
   },
 };
 
@@ -122,6 +164,14 @@ const trips = [
     id: "paris-icons",
     category: ["city", "private"],
     image: "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?auto=format&fit=crop&w=1200&q=78",
+    gallery: [
+      "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?auto=format&fit=crop&w=1200&q=78",
+      "https://images.unsplash.com/photo-1431274172761-fca41d930114?auto=format&fit=crop&w=1200&q=78",
+      "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=1200&q=78",
+      "https://images.unsplash.com/photo-1520939817895-060bdaf4fe1b?auto=format&fit=crop&w=1200&q=78",
+    ],
+    rating: 4.8,
+    reviewCount: 124,
     duration: 3,
     price: 460,
     optionPrice: 120,
@@ -136,18 +186,26 @@ const trips = [
     },
     fr: {
       region: "Paris",
-      title: "Echappee privee Paris iconique",
-      copy: "Louvre essentiel, croisiere sur la Seine, hotel boutique et soiree flexible.",
-      tags: ["Guide prive", "Musee", "Couples"],
-      itinerary: ["Arrivee, balade dans le Marais et table bistro", "Essentiels du Louvre et croisiere Seine", "Montmartre, shopping et depart"],
-      includes: ["Guide prive demi-journee", "Preparation billets musee", "Selection restaurants", "Notes metro et transferts"],
-      option: "Ajouter transfert aeroport",
+      title: "Échappée privée Paris iconique",
+      copy: "Louvre essentiel, croisière sur la Seine, hôtel boutique et soirée flexible.",
+      tags: ["Guide privé", "Musée", "Couples"],
+      itinerary: ["Arrivée, balade dans le Marais et table bistro", "Essentiels du Louvre et croisière Seine", "Montmartre, shopping et départ"],
+      includes: ["Guide privé demi-journée", "Préparation billets musée", "Sélection restaurants", "Notes métro et transferts"],
+      option: "Ajouter transfert aéroport",
     },
   },
   {
     id: "provence-wine",
     category: ["food", "private"],
     image: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=78",
+    gallery: [
+      "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=78",
+      "https://images.unsplash.com/photo-1507434965515-61970f2bd7c6?auto=format&fit=crop&w=1200&q=78",
+      "https://images.unsplash.com/photo-1568213816046-0ee1c42bd559?auto=format&fit=crop&w=1200&q=78",
+      "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1200&q=78",
+    ],
+    rating: 4.9,
+    reviewCount: 87,
     duration: 5,
     price: 980,
     optionPrice: 180,
@@ -163,17 +221,25 @@ const trips = [
     fr: {
       region: "Provence",
       title: "Route vins et villages de Provence",
-      copy: "Domaines viticoles, huile d'olive, paysages de lavande et dejeuners au village.",
+      copy: "Domaines viticoles, huile d'olive, paysages de lavande et déjeuners au village.",
       tags: ["Vin", "Villages", "Slow travel"],
-      itinerary: ["Arrivee Avignon et diner vieille ville", "Journee caves a Chateauneuf-du-Pape", "Villages du Luberon et huile d'olive", "Lavande et dejeuner de marche", "Matinee a Aix-en-Provence et depart"],
-      includes: ["Deux rendez-vous domaines", "Parcours villages", "Recommendation dejeuner marche", "Aide option chauffeur prive"],
-      option: "Ajouter une journee chauffeur prive",
+      itinerary: ["Arrivée Avignon et dîner vieille ville", "Journée caves à Châteauneuf-du-Pape", "Villages du Luberon et huile d'olive", "Lavande et déjeuner de marché", "Matinée à Aix-en-Provence et départ"],
+      includes: ["Deux rendez-vous domaines", "Parcours villages", "Recommandation déjeuner marché", "Aide option chauffeur privé"],
+      option: "Ajouter une journée chauffeur privé",
     },
   },
   {
     id: "riviera-family",
     category: ["coast", "family"],
     image: "https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=1200&q=78",
+    gallery: [
+      "https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=1200&q=78",
+      "https://images.unsplash.com/photo-1504512485720-7d83a16ee930?auto=format&fit=crop&w=1200&q=78",
+      "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=1200&q=78",
+      "https://images.unsplash.com/photo-1505881502353-a1986add3762?auto=format&fit=crop&w=1200&q=78",
+    ],
+    rating: 4.7,
+    reviewCount: 156,
     duration: 6,
     price: 1240,
     optionPrice: 240,
@@ -187,19 +253,27 @@ const trips = [
       option: "Add half-day boat charter",
     },
     fr: {
-      region: "Cote d'Azur",
-      title: "Cote d'Azur en famille",
-      copy: "Nice, Antibes, journee bateau en option, plage et transferts adaptes aux enfants.",
+      region: "Côte d'Azur",
+      title: "Côte d'Azur en famille",
+      copy: "Nice, Antibes, journée bateau en option, plage et transferts adaptés aux enfants.",
       tags: ["Plage", "Famille", "Transferts"],
-      itinerary: ["Arrivee Nice et promenade", "Vieil Antibes et plage", "Bateau ou aquarium", "Demi-journee Monaco", "Journee panorama Cassis ou Eze", "Depart tranquille"],
-      includes: ["Recherche chambres famille", "Carte activites enfants", "Plan transferts", "Selection clubs de plage"],
-      option: "Ajouter bateau prive demi-journee",
+      itinerary: ["Arrivée Nice et promenade", "Vieil Antibes et plage", "Bateau ou aquarium", "Demi-journée Monaco", "Journée panorama Cassis ou Èze", "Départ tranquille"],
+      includes: ["Recherche chambres famille", "Carte activités enfants", "Plan transferts", "Sélection clubs de plage"],
+      option: "Ajouter bateau privé demi-journée",
     },
   },
   {
     id: "loire-castles",
     category: ["family", "city"],
     image: "https://images.unsplash.com/photo-1518005020951-eccb494ad742?auto=format&fit=crop&w=1200&q=78",
+    gallery: [
+      "https://images.unsplash.com/photo-1518005020951-eccb494ad742?auto=format&fit=crop&w=1200&q=78",
+      "https://images.unsplash.com/photo-1564594985645-4427056e22e2?auto=format&fit=crop&w=1200&q=78",
+      "https://images.unsplash.com/photo-1551918120-9739cb430c6d?auto=format&fit=crop&w=1200&q=78",
+      "https://images.unsplash.com/photo-1543349689-9a4d426bee8e?auto=format&fit=crop&w=1200&q=78",
+    ],
+    rating: 4.6,
+    reviewCount: 92,
     duration: 4,
     price: 720,
     optionPrice: 90,
@@ -214,18 +288,26 @@ const trips = [
     },
     fr: {
       region: "Val de Loire",
-      title: "Chateaux de la Loire en voiture",
-      copy: "Billets chateaux, routes panoramiques, jardins et hebergements familiaux.",
-      tags: ["Chateaux", "Voiture", "Famille"],
-      itinerary: ["Arrivee Tours et diner bord de Loire", "Chambord et Cheverny", "Jardins de Chenonceau et pique-nique", "Matinee Amboise et depart"],
-      includes: ["Plan billets chateaux", "Itineraire voiture", "Selection hotels famille", "Notes pique-nique et jardins"],
-      option: "Ajouter location velos electriques",
+      title: "Châteaux de la Loire en voiture",
+      copy: "Billets châteaux, routes panoramiques, jardins et hébergements familiaux.",
+      tags: ["Châteaux", "Voiture", "Famille"],
+      itinerary: ["Arrivée Tours et dîner bord de Loire", "Chambord et Cheverny", "Jardins de Chenonceau et pique-nique", "Matinée Amboise et départ"],
+      includes: ["Plan billets châteaux", "Itinéraire voiture", "Sélection hôtels famille", "Notes pique-nique et jardins"],
+      option: "Ajouter location vélos électriques",
     },
   },
   {
     id: "bordeaux-table",
     category: ["food", "city"],
     image: "https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=1200&q=78",
+    gallery: [
+      "https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=1200&q=78",
+      "https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?auto=format&fit=crop&w=1200&q=78",
+      "https://images.unsplash.com/photo-1474722883778-792e7990302f?auto=format&fit=crop&w=1200&q=78",
+      "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1200&q=78",
+    ],
+    rating: 4.8,
+    reviewCount: 68,
     duration: 3,
     price: 640,
     optionPrice: 150,
@@ -241,17 +323,25 @@ const trips = [
     fr: {
       region: "Bordeaux",
       title: "Tables et caves de Bordeaux",
-      copy: "Marche, carte des bars a vin, Saint-Emilion et reservations de restaurants.",
+      copy: "Marché, carte des bars à vin, Saint-Émilion et réservations de restaurants.",
       tags: ["Vin", "Restaurants", "Week-end"],
-      itinerary: ["Arrivee Bordeaux et route bars a vin", "Marche et Saint-Emilion", "Cite du Vin et dernier dejeuner"],
-      includes: ["Carte bars a vin", "Liste restaurants", "Timing Saint-Emilion", "Notes transport local"],
-      option: "Ajouter degustation premium",
+      itinerary: ["Arrivée Bordeaux et route bars à vin", "Marché et Saint-Émilion", "Cité du Vin et dernier déjeuner"],
+      includes: ["Carte bars à vin", "Liste restaurants", "Timing Saint-Émilion", "Notes transport local"],
+      option: "Ajouter dégustation premium",
     },
   },
   {
     id: "alps-active",
     category: ["family", "private"],
     image: "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1200&q=78",
+    gallery: [
+      "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1200&q=78",
+      "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200&q=78",
+      "https://images.unsplash.com/photo-1551632811-561732d1e306?auto=format&fit=crop&w=1200&q=78",
+      "https://images.unsplash.com/photo-1486870591958-9b9d0d1dda99?auto=format&fit=crop&w=1200&q=78",
+    ],
+    rating: 4.9,
+    reviewCount: 73,
     duration: 7,
     price: 1420,
     optionPrice: 210,
@@ -265,16 +355,91 @@ const trips = [
       option: "Add guided canyoning",
     },
     fr: {
-      region: "Alpes francaises",
-      title: "Semaine active d'ete dans les Alpes",
-      copy: "Lacs, telepheriques, randonnees guidees, spa et niveaux d'activite flexibles.",
-      tags: ["Nature", "Actif", "Prive"],
-      itinerary: ["Arrivee Annecy", "Velo lac et vieille ville", "Telepherique Chamonix", "Randonnee guidee famille", "Spa et village", "Activite aventure au choix", "Depart"],
-      includes: ["Adaptation niveau activite", "Selection guides", "Planification spa", "Idees meteo de secours"],
-      option: "Ajouter canyoning guide",
+      region: "Alpes françaises",
+      title: "Semaine active d'été dans les Alpes",
+      copy: "Lacs, téléphériques, randonnées guidées, spa et niveaux d'activité flexibles.",
+      tags: ["Nature", "Actif", "Privé"],
+      itinerary: ["Arrivée Annecy", "Vélo lac et vieille ville", "Téléphérique Chamonix", "Randonnée guidée famille", "Spa et village", "Activité aventure au choix", "Départ"],
+      includes: ["Adaptation niveau activité", "Sélection guides", "Planification spa", "Idées météo de secours"],
+      option: "Ajouter canyoning guidé",
     },
   },
 ];
+
+const reviews = {
+  "paris-icons": {
+    en: [
+      { name: "Sarah K.", date: "Mar 2026", rating: 5, body: "Loved the boutique hotel recommendation and the Seine cruise timing was perfect at sunset." },
+      { name: "Daniel M.", date: "Feb 2026", rating: 5, body: "Our guide knew exactly which Louvre rooms to skip. Worth every euro." },
+      { name: "Ava L.", date: "Jan 2026", rating: 4, body: "Great pace for a 3-day break. The Montmartre morning was a highlight." },
+    ],
+    fr: [
+      { name: "Sarah K.", date: "Mars 2026", rating: 5, body: "Hôtel boutique parfait et la croisière au coucher du soleil était magique." },
+      { name: "Daniel M.", date: "Févr. 2026", rating: 5, body: "Notre guide a su éviter les salles bondées du Louvre. Excellent." },
+      { name: "Ava L.", date: "Janv. 2026", rating: 4, body: "Bon rythme pour 3 jours. La matinée à Montmartre était superbe." },
+    ],
+  },
+  "provence-wine": {
+    en: [
+      { name: "Marc R.", date: "Apr 2026", rating: 5, body: "The Châteauneuf-du-Pape day was unforgettable. Small producers, generous tastings." },
+      { name: "Linda T.", date: "Mar 2026", rating: 5, body: "Lavender season timing was spot on. The village lunch in Gordes was magical." },
+      { name: "Pierre V.", date: "Feb 2026", rating: 5, body: "Driver option made the wine days stress-free. Highly recommend the upgrade." },
+    ],
+    fr: [
+      { name: "Marc R.", date: "Avril 2026", rating: 5, body: "La journée à Châteauneuf-du-Pape était inoubliable. Petits producteurs, dégustations généreuses." },
+      { name: "Linda T.", date: "Mars 2026", rating: 5, body: "Saison des lavandes parfaitement timée. Déjeuner à Gordes magique." },
+      { name: "Pierre V.", date: "Févr. 2026", rating: 5, body: "L'option chauffeur a rendu les journées vin sans stress. Très recommandé." },
+    ],
+  },
+  "riviera-family": {
+    en: [
+      { name: "Emma S.", date: "Mar 2026", rating: 5, body: "Kids loved the boat day and the beach club had real shade. Smooth transfers." },
+      { name: "Jin H.", date: "Feb 2026", rating: 4, body: "Antibes old town was a hit. Monaco felt rushed at half-day but doable." },
+      { name: "Olivia P.", date: "Jan 2026", rating: 5, body: "Family rooms were excellent. The activity map saved us hours of planning." },
+    ],
+    fr: [
+      { name: "Emma S.", date: "Mars 2026", rating: 5, body: "Les enfants ont adoré la journée bateau et le club de plage était bien ombragé." },
+      { name: "Jin H.", date: "Févr. 2026", rating: 4, body: "Vieil Antibes a fait l'unanimité. Monaco en demi-journée un peu rapide mais ok." },
+      { name: "Olivia P.", date: "Janv. 2026", rating: 5, body: "Chambres familles excellentes. La carte d'activités nous a fait gagner du temps." },
+    ],
+  },
+  "loire-castles": {
+    en: [
+      { name: "Tom B.", date: "Apr 2026", rating: 5, body: "Self-drive route was beautiful and stress-free. Chenonceau in the morning is a must." },
+      { name: "Marie L.", date: "Mar 2026", rating: 4, body: "Family-sized stay near Amboise was perfect. E-bike day was a fun addition." },
+      { name: "Henry C.", date: "Feb 2026", rating: 5, body: "Ticket plan saved us all the queues. Picnic notes were really thoughtful." },
+    ],
+    fr: [
+      { name: "Tom B.", date: "Avril 2026", rating: 5, body: "Itinéraire voiture magnifique et sans stress. Chenonceau le matin, à faire absolument." },
+      { name: "Marie L.", date: "Mars 2026", rating: 4, body: "Hébergement famille près d'Amboise parfait. La journée vélo électrique était un plus." },
+      { name: "Henry C.", date: "Févr. 2026", rating: 5, body: "Plan billets sans files d'attente. Notes pique-nique très bien pensées." },
+    ],
+  },
+  "bordeaux-table": {
+    en: [
+      { name: "Chloe D.", date: "Mar 2026", rating: 5, body: "Wine bar map was gold. Saint-Émilion timing avoided the crowds nicely." },
+      { name: "Raphael O.", date: "Feb 2026", rating: 5, body: "Premium tasting was a real splurge — worth every cent." },
+      { name: "Sophie W.", date: "Jan 2026", rating: 4, body: "Great weekend pace. The market walk was my favorite morning." },
+    ],
+    fr: [
+      { name: "Chloé D.", date: "Mars 2026", rating: 5, body: "Carte des bars à vin en or. Saint-Émilion sans la foule, parfait." },
+      { name: "Raphaël O.", date: "Févr. 2026", rating: 5, body: "Dégustation premium un peu chère mais vraiment exceptionnelle." },
+      { name: "Sophie W.", date: "Janv. 2026", rating: 4, body: "Bon rythme week-end. La balade au marché fut mon moment préféré." },
+    ],
+  },
+  "alps-active": {
+    en: [
+      { name: "Lukas F.", date: "Aug 2026", rating: 5, body: "Activity level matching was perfect for mixed-age family. Spa days saved us." },
+      { name: "Nina G.", date: "Jul 2026", rating: 5, body: "Canyoning add-on was the trip highlight for our teens. Guide was excellent." },
+      { name: "David Y.", date: "Jul 2026", rating: 5, body: "Weather backup ideas came in handy. Lake Annecy in the morning is unreal." },
+    ],
+    fr: [
+      { name: "Lukas F.", date: "Août 2026", rating: 5, body: "Niveau d'activité bien adapté à une famille avec écarts d'âge. Spa très bienvenu." },
+      { name: "Nina G.", date: "Juill. 2026", rating: 5, body: "L'option canyoning a marqué nos ados. Guide excellent." },
+      { name: "David Y.", date: "Juill. 2026", rating: 5, body: "Idées météo de secours bien utiles. Annecy le matin, magnifique." },
+    ],
+  },
+};
 
 const routes = {
   en: [
@@ -283,8 +448,8 @@ const routes = {
     ["Coast and culture", "Nice, Antibes, Marseille, Cassis, and Aix-en-Provence"],
   ],
   fr: [
-    ["Premiere France", "Paris 3 nuits + Loire 2 nuits + Bordeaux 2 nuits"],
-    ["Voyage gourmand", "Marches de Lyon + villages de Provence + caves de Bordeaux"],
+    ["Première France", "Paris 3 nuits + Loire 2 nuits + Bordeaux 2 nuits"],
+    ["Voyage gourmand", "Marchés de Lyon + villages de Provence + caves de Bordeaux"],
     ["Littoral et culture", "Nice, Antibes, Marseille, Cassis et Aix-en-Provence"],
   ],
 };
@@ -292,7 +457,17 @@ const routes = {
 let currentLang = "en";
 let currentFilter = "all";
 let activeTripId = null;
-let cart = JSON.parse(localStorage.getItem("nadotrip-cart") || "[]");
+let cart = loadCart();
+
+function loadCart() {
+  try {
+    const raw = JSON.parse(localStorage.getItem("nadotrip-cart") || "[]");
+    if (!Array.isArray(raw)) return [];
+    return raw.filter((item) => item && trips.some((trip) => trip.id === item.tripId));
+  } catch {
+    return [];
+  }
+}
 
 const $ = (selector) => document.querySelector(selector);
 const $$ = (selector) => [...document.querySelectorAll(selector)];
@@ -335,16 +510,21 @@ function renderTrips() {
       const copy = trip[currentLang];
       return `
         <article class="trip-card" data-testid="trip-card">
-          <img class="trip-image" src="${trip.image}" alt="${copy.region}" loading="lazy" />
+          <img class="trip-image" src="${trip.image}" alt="${escapeHtml(copy.region)}" loading="lazy" />
           <div class="trip-body">
             <div class="trip-meta">
-              <span>${copy.region}</span>
+              <span>${escapeHtml(copy.region)}</span>
               <span>${trip.duration} ${t("days")}</span>
             </div>
-            <h3>${copy.title}</h3>
-            <p>${copy.copy}</p>
+            <h3>${escapeHtml(copy.title)}</h3>
+            <div class="card-rating" aria-label="${trip.rating} ${t("ratingLabel")}">
+              <span class="stars stars-sm" aria-hidden="true">${renderStars(trip.rating)}</span>
+              <strong>${trip.rating.toFixed(1)}</strong>
+              <span class="muted">(${trip.reviewCount})</span>
+            </div>
+            <p>${escapeHtml(copy.copy)}</p>
             <div class="tag-row" aria-label="Trip tags">
-              ${copy.tags.map((tag) => `<span class="tag">${tag}</span>`).join("")}
+              ${copy.tags.map((tag) => `<span class="tag">${escapeHtml(tag)}</span>`).join("")}
             </div>
             <div class="trip-footer">
               <span class="price">${t("from")} ${formatPrice(trip.price)} <small>${t("perPerson")}</small></span>
@@ -360,6 +540,27 @@ function renderTrips() {
   });
 }
 
+function escapeHtml(str) {
+  return String(str)
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#39;");
+}
+
+function renderStars(rating) {
+  const full = Math.floor(rating);
+  const half = rating - full >= 0.5;
+  const stars = [];
+  for (let i = 0; i < 5; i += 1) {
+    if (i < full) stars.push("★");
+    else if (i === full && half) stars.push("⯪");
+    else stars.push("☆");
+  }
+  return stars.join("");
+}
+
 function renderProductDetail() {
   const section = $("#product-detail");
   const trip = tripById(activeTripId);
@@ -371,16 +572,31 @@ function renderProductDetail() {
 
   const copy = trip[currentLang];
   const defaultDate = new Date(Date.now() + 1000 * 60 * 60 * 24 * 21).toISOString().slice(0, 10);
+  const gallery = trip.gallery && trip.gallery.length ? trip.gallery : [trip.image];
+  const tripReviews = (reviews[trip.id] && reviews[trip.id][currentLang]) || [];
+
   section.classList.remove("is-hidden");
   section.innerHTML = `
     <div class="detail-media">
-      <img src="${trip.image}" alt="${copy.title}" />
+      <img id="detail-hero-img" src="${gallery[0]}" alt="${escapeHtml(copy.title)}" />
+      ${gallery.length > 1 ? `
+        <div class="gallery-thumbs" role="list" aria-label="${t("galleryLabel")}">
+          ${gallery.map((src, i) => `
+            <button type="button" class="thumb${i === 0 ? " is-active" : ""}" data-thumb="${i}" aria-label="${t("galleryLabel")} ${i + 1}">
+              <img src="${src}" alt="" loading="lazy" />
+            </button>`).join("")}
+        </div>` : ""}
     </div>
     <div class="detail-content">
       <a class="back-link" href="#trips">${t("backToTrips")}</a>
-      <p class="eyebrow">${copy.region}</p>
-      <h2>${copy.title}</h2>
-      <p class="detail-copy">${copy.copy}</p>
+      <p class="eyebrow">${escapeHtml(copy.region)}</p>
+      <h2>${escapeHtml(copy.title)}</h2>
+      <div class="rating-row" aria-label="${trip.rating} ${t("ratingLabel")}">
+        <span class="stars" aria-hidden="true">${renderStars(trip.rating)}</span>
+        <strong>${trip.rating.toFixed(1)}</strong>
+        <span class="muted">· ${trip.reviewCount} ${t("reviewsShort")}</span>
+      </div>
+      <p class="detail-copy">${escapeHtml(copy.copy)}</p>
       <div class="detail-facts">
         <span>${trip.duration} ${t("days")}</span>
         <span>${t("from")} ${formatPrice(trip.price)} ${t("perPerson")}</span>
@@ -389,14 +605,26 @@ function renderProductDetail() {
         <div>
           <h3>${t("itinerary")}</h3>
           <ol class="itinerary-list">
-            ${copy.itinerary.map((item, index) => `<li><strong>${t("day")} ${index + 1}</strong><span>${item}</span></li>`).join("")}
+            ${copy.itinerary.map((item, index) => `<li><strong>${t("day")} ${index + 1}</strong><span>${escapeHtml(item)}</span></li>`).join("")}
           </ol>
+
+          <h3 class="block-title">${t("priceIncludesTitle")}</h3>
+          <ul class="include-list">
+            ${t("priceIncludes").map((item) => `<li>${escapeHtml(item)}</li>`).join("")}
+            ${copy.includes.map((item) => `<li>${escapeHtml(item)}</li>`).join("")}
+          </ul>
+
+          <h3 class="block-title">${t("priceExcludesTitle")}</h3>
+          <ul class="include-list muted-list">
+            ${t("priceExcludes").map((item) => `<li>${escapeHtml(item)}</li>`).join("")}
+          </ul>
+
+          <div class="policy-box">
+            <h3>${t("cancellationTitle")}</h3>
+            <p>${escapeHtml(t("cancellationCopy"))}</p>
+          </div>
         </div>
         <div>
-          <h3>${t("includes")}</h3>
-          <ul class="include-list">
-            ${copy.includes.map((item) => `<li>${item}</li>`).join("")}
-          </ul>
           <div class="booking-box">
             <label>
               <span>${t("startDate")}</span>
@@ -408,7 +636,7 @@ function renderProductDetail() {
             </label>
             <label class="option-row">
               <input id="detail-option" type="checkbox" />
-              <span>${copy.option} (+${formatPrice(trip.optionPrice)})</span>
+              <span>${escapeHtml(copy.option)} (+${formatPrice(trip.optionPrice)})</span>
             </label>
             <div class="booking-total">
               <span>${t("estimate")}</span>
@@ -418,6 +646,22 @@ function renderProductDetail() {
           </div>
         </div>
       </div>
+
+      ${tripReviews.length ? `
+        <div class="reviews-block">
+          <h3>${t("reviewsTitle")}</h3>
+          <div class="review-list">
+            ${tripReviews.map((r) => `
+              <article class="review-item">
+                <div class="review-head">
+                  <strong>${escapeHtml(r.name)}</strong>
+                  <span class="muted">${escapeHtml(r.date)}</span>
+                </div>
+                <div class="stars stars-sm" aria-label="${r.rating} ${t("ratingLabel")}">${renderStars(r.rating)}</div>
+                <p>${escapeHtml(r.body)}</p>
+              </article>`).join("")}
+          </div>
+        </div>` : ""}
     </div>`;
 
   const updateTotal = () => {
@@ -428,7 +672,17 @@ function renderProductDetail() {
   $("#detail-travelers").addEventListener("input", updateTotal);
   $("#detail-option").addEventListener("change", updateTotal);
   $("#add-cart-button").addEventListener("click", () => addActiveTripToCart());
+
+  $$('[data-thumb]').forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const idx = Number(btn.dataset.thumb);
+      $("#detail-hero-img").src = gallery[idx];
+      $$('[data-thumb]').forEach((b) => b.classList.toggle("is-active", b === btn));
+    });
+  });
+
   updateTotal();
+  updateStickyCta();
 }
 
 function addActiveTripToCart() {
@@ -444,8 +698,47 @@ function addActiveTripToCart() {
   saveCart();
   renderCart();
   renderCheckoutSummary();
+  updateCartBadge();
+  showToast(t("addedToast"));
   $("#add-cart-button").textContent = t("inCart");
-  $("#cart").scrollIntoView({ behavior: "smooth", block: "start" });
+}
+
+let toastTimer = null;
+function showToast(message) {
+  const el = $("#toast");
+  if (!el) return;
+  el.textContent = message;
+  el.hidden = false;
+  el.classList.add("is-visible");
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => {
+    el.classList.remove("is-visible");
+    setTimeout(() => { el.hidden = true; }, 220);
+  }, 2200);
+}
+
+function updateCartBadge() {
+  const badge = $("#cart-badge");
+  if (!badge) return;
+  const count = cart.length;
+  badge.textContent = count;
+  badge.hidden = count === 0;
+}
+
+function updateStickyCta() {
+  const bar = $("#sticky-cta");
+  if (!bar) return;
+  const trip = tripById(activeTripId);
+  if (!trip) {
+    bar.hidden = true;
+    return;
+  }
+  bar.hidden = false;
+  $("#sticky-cta-price").textContent = `${t("from")} ${formatPrice(trip.price)}`;
+  $("#sticky-cta-label").textContent = t("perPerson");
+  const btn = $("#sticky-cta-btn");
+  btn.textContent = t("addToCart");
+  btn.onclick = () => addActiveTripToCart();
 }
 
 function renderCart() {
@@ -483,6 +776,7 @@ function renderCart() {
       saveCart();
       renderCart();
       renderCheckoutSummary();
+      updateCartBadge();
     });
   });
 }
@@ -542,6 +836,8 @@ function applyLanguage(lang) {
   renderRoutes();
   renderCart();
   renderCheckoutSummary();
+  updateCartBadge();
+  updateStickyCta();
 }
 
 function openProduct(id) {
@@ -553,7 +849,11 @@ function openProduct(id) {
 
 function syncProductFromHash() {
   const match = window.location.hash.match(/^#product-(.+)$/);
-  activeTripId = match && tripById(match[1]) ? match[1] : activeTripId;
+  if (match && tripById(match[1])) {
+    activeTripId = match[1];
+  } else {
+    activeTripId = null;
+  }
   renderProductDetail();
 }
 

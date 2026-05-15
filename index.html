@@ -3,11 +3,20 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#0b766f" />
     <meta
       name="description"
-      content="NadoTrip is a bilingual travel marketplace MVP for curated France trips, day tours, stays, and local experiences."
+      content="NadoTrip is a bilingual travel marketplace for curated France trips, day tours, stays, and local experiences."
     />
     <title>NadoTrip | Curated France Travel</title>
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="NadoTrip | Curated France Travel" />
+    <meta property="og:description" content="Curated city breaks, food trails, coastal escapes, and private journeys across France." />
+    <meta property="og:image" content="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=1200&q=80" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b766f'/%3E%3Ctext x='32' y='44' font-family='Inter,Arial,sans-serif' font-size='38' font-weight='800' fill='white' text-anchor='middle'%3EN%3C/text%3E%3C/svg%3E" />
     <link rel="preconnect" href="https://images.unsplash.com" />
     <link rel="stylesheet" href="styles.css" />
   </head>
@@ -20,13 +29,18 @@
       <nav class="nav-links" aria-label="Primary navigation">
         <a href="#trips" data-i18n="navTrips">Trips</a>
         <a href="#planner" data-i18n="navPlanner">Planner</a>
-        <a href="#checkout" data-i18n="navCheckout">Checkout</a>
+        <a href="#cart" class="cart-link" aria-label="Cart">
+          <span data-i18n="navCheckout">Checkout</span>
+          <span class="cart-badge" id="cart-badge" hidden>0</span>
+        </a>
       </nav>
       <div class="header-actions" aria-label="Language selector">
         <button class="lang-button is-active" type="button" data-lang="en">EN</button>
         <button class="lang-button" type="button" data-lang="fr">FR</button>
       </div>
     </header>
+
+    <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
 
     <main id="top">
       <section class="hero" aria-labelledby="hero-title">
@@ -82,6 +96,13 @@
       </section>
 
       <section class="detail-section is-hidden" id="product-detail" aria-live="polite"></section>
+      <div class="sticky-cta" id="sticky-cta" hidden>
+        <div class="sticky-cta-info">
+          <strong id="sticky-cta-price"></strong>
+          <span id="sticky-cta-label"></span>
+        </div>
+        <button class="primary-action" type="button" id="sticky-cta-btn"></button>
+      </div>
 
       <section class="planner-band" id="planner" aria-labelledby="planner-title">
         <div class="planner-copy">
