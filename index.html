@@ -20,7 +20,7 @@
       <nav class="nav-links" aria-label="Primary navigation">
         <a href="#trips" data-i18n="navTrips">Trips</a>
         <a href="#planner" data-i18n="navPlanner">Planner</a>
-        <a href="#request" data-i18n="navRequest">Request</a>
+        <a href="#checkout" data-i18n="navCheckout">Checkout</a>
       </nav>
       <div class="header-actions" aria-label="Language selector">
         <button class="lang-button is-active" type="button" data-lang="en">EN</button>
@@ -81,6 +81,8 @@
         <div class="trip-grid" id="trip-grid" data-testid="trip-grid"></div>
       </section>
 
+      <section class="detail-section is-hidden" id="product-detail" aria-live="polite"></section>
+
       <section class="planner-band" id="planner" aria-labelledby="planner-title">
         <div class="planner-copy">
           <p class="eyebrow" data-i18n="plannerEyebrow">Suggested routes</p>
@@ -89,12 +91,23 @@
         <div class="route-list" id="route-list"></div>
       </section>
 
-      <section class="request-section" id="request" aria-labelledby="request-title">
+      <section class="cart-section" id="cart" aria-labelledby="cart-title">
+        <div class="cart-heading">
+          <p class="eyebrow" data-i18n="cartEyebrow">Trip cart</p>
+          <h2 id="cart-title" data-i18n="cartTitle">Your selected products</h2>
+          <p data-i18n="cartCopy">
+            Add one or more travel products, adjust travelers and dates, then send the order intent.
+          </p>
+        </div>
+        <div class="cart-panel" id="cart-panel" data-testid="cart-panel"></div>
+      </section>
+
+      <section class="request-section" id="checkout" aria-labelledby="checkout-title">
         <div class="request-copy">
-          <p class="eyebrow" data-i18n="requestEyebrow">Booking intent</p>
-          <h2 id="request-title" data-i18n="requestTitle">Send a trip request</h2>
-          <p data-i18n="requestCopy">
-            This MVP captures the core sales workflow before connecting payments, CRM, or supplier inventory.
+          <p class="eyebrow" data-i18n="checkoutEyebrow">Checkout</p>
+          <h2 id="checkout-title" data-i18n="checkoutTitle">Confirm booking intent</h2>
+          <p data-i18n="checkoutCopy">
+            For the MVP, checkout records a qualified order instead of charging payment.
           </p>
         </div>
         <form class="request-form" id="request-form" data-testid="request-form">
@@ -106,19 +119,12 @@
             <span data-i18n="formEmail">Email</span>
             <input name="email" type="email" autocomplete="email" required placeholder="alex@example.com" />
           </label>
-          <label>
-            <span data-i18n="formTravelers">Travelers</span>
-            <input name="travelers" type="number" min="1" value="2" required />
-          </label>
-          <label>
-            <span data-i18n="formInterest">Interested in</span>
-            <select name="interest" id="interest-select"></select>
-          </label>
+          <div class="checkout-summary wide-field" id="checkout-summary"></div>
           <label class="wide-field">
             <span data-i18n="formNotes">Notes</span>
-            <textarea name="notes" rows="4" data-i18n-placeholder="formNotesPlaceholder" placeholder="Dates, budget, preferred destinations"></textarea>
+            <textarea name="notes" rows="4" data-i18n-placeholder="formNotesPlaceholder" placeholder="Hotel level, dietary needs, pickup city, timing constraints"></textarea>
           </label>
-          <button class="primary-action wide-field" type="submit" data-i18n="formSubmit">Create request</button>
+          <button class="primary-action wide-field" type="submit" data-i18n="formSubmit">Submit booking intent</button>
           <p class="form-status wide-field" id="form-status" role="status" aria-live="polite"></p>
         </form>
       </section>
