@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="NadoTrip is a bilingual travel marketplace MVP for curated France trips, day tours, stays, and local experiences."
+    />
+    <title>NadoTrip | Curated France Travel</title>
+    <link rel="preconnect" href="https://images.unsplash.com" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header" data-testid="site-header">
+      <a class="brand" href="#top" aria-label="NadoTrip home">
+        <span class="brand-mark">N</span>
+        <span>NadoTrip</span>
+      </a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="#trips" data-i18n="navTrips">Trips</a>
+        <a href="#planner" data-i18n="navPlanner">Planner</a>
+        <a href="#request" data-i18n="navRequest">Request</a>
+      </nav>
+      <div class="header-actions" aria-label="Language selector">
+        <button class="lang-button is-active" type="button" data-lang="en">EN</button>
+        <button class="lang-button" type="button" data-lang="fr">FR</button>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-media" role="img" aria-label="Paris skyline at sunset"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+          <p class="eyebrow" data-i18n="heroEyebrow">France travel marketplace</p>
+          <h1 id="hero-title" data-i18n="heroTitle">NadoTrip</h1>
+          <p class="hero-copy" data-i18n="heroCopy">
+            Curated city breaks, food trails, coastal escapes, and private journeys across France.
+          </p>
+          <div class="hero-actions">
+            <a class="primary-action" href="#trips" data-i18n="heroPrimary">Explore trips</a>
+            <a class="secondary-action" href="#request" data-i18n="heroSecondary">Plan my route</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="trust-band" aria-label="NadoTrip highlights">
+        <div>
+          <strong data-i18n="statOneValue">24h</strong>
+          <span data-i18n="statOneLabel">quote turnaround</span>
+        </div>
+        <div>
+          <strong data-i18n="statTwoValue">2</strong>
+          <span data-i18n="statTwoLabel">languages</span>
+        </div>
+        <div>
+          <strong data-i18n="statThreeValue">8</strong>
+          <span data-i18n="statThreeLabel">France regions</span>
+        </div>
+      </section>
+
+      <section class="section" id="trips" aria-labelledby="trips-title">
+        <div class="section-heading">
+          <p class="eyebrow" data-i18n="tripsEyebrow">Marketplace</p>
+          <h2 id="trips-title" data-i18n="tripsTitle">Find the right France product</h2>
+          <p data-i18n="tripsCopy">
+            Mix ready-to-sell products with private customization for couples, families, and small groups.
+          </p>
+        </div>
+
+        <div class="filters" aria-label="Trip filters">
+          <button class="filter-pill is-active" type="button" data-filter="all" data-i18n="filterAll">All</button>
+          <button class="filter-pill" type="button" data-filter="city" data-i18n="filterCity">City</button>
+          <button class="filter-pill" type="button" data-filter="food" data-i18n="filterFood">Food & wine</button>
+          <button class="filter-pill" type="button" data-filter="coast" data-i18n="filterCoast">Coast</button>
+          <button class="filter-pill" type="button" data-filter="family" data-i18n="filterFamily">Family</button>
+          <button class="filter-pill" type="button" data-filter="private" data-i18n="filterPrivate">Private</button>
+        </div>
+
+        <div class="trip-grid" id="trip-grid" data-testid="trip-grid"></div>
+      </section>
+
+      <section class="planner-band" id="planner" aria-labelledby="planner-title">
+        <div class="planner-copy">
+          <p class="eyebrow" data-i18n="plannerEyebrow">Suggested routes</p>
+          <h2 id="planner-title" data-i18n="plannerTitle">Three fast ways to sell France</h2>
+        </div>
+        <div class="route-list" id="route-list"></div>
+      </section>
+
+      <section class="request-section" id="request" aria-labelledby="request-title">
+        <div class="request-copy">
+          <p class="eyebrow" data-i18n="requestEyebrow">Booking intent</p>
+          <h2 id="request-title" data-i18n="requestTitle">Send a trip request</h2>
+          <p data-i18n="requestCopy">
+            This MVP captures the core sales workflow before connecting payments, CRM, or supplier inventory.
+          </p>
+        </div>
+        <form class="request-form" id="request-form" data-testid="request-form">
+          <label>
+            <span data-i18n="formName">Name</span>
+            <input name="name" autocomplete="name" required placeholder="Alex Martin" />
+          </label>
+          <label>
+            <span data-i18n="formEmail">Email</span>
+            <input name="email" type="email" autocomplete="email" required placeholder="alex@example.com" />
+          </label>
+          <label>
+            <span data-i18n="formTravelers">Travelers</span>
+            <input name="travelers" type="number" min="1" value="2" required />
+          </label>
+          <label>
+            <span data-i18n="formInterest">Interested in</span>
+            <select name="interest" id="interest-select"></select>
+          </label>
+          <label class="wide-field">
+            <span data-i18n="formNotes">Notes</span>
+            <textarea name="notes" rows="4" data-i18n-placeholder="formNotesPlaceholder" placeholder="Dates, budget, preferred destinations"></textarea>
+          </label>
+          <button class="primary-action wide-field" type="submit" data-i18n="formSubmit">Create request</button>
+          <p class="form-status wide-field" id="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>NadoTrip</span>
+      <span data-i18n="footerCopy">France travel sales MVP for web, tablet, and mobile.</span>
+    </footer>
+
+    <script src="app.js" defer></script>
+  </body>
+</html>
