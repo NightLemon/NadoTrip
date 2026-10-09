@@ -6,13 +6,13 @@
     <meta name="theme-color" content="#0b766f" />
     <meta
       name="description"
-      content="NadoTrip is a bilingual travel marketplace for curated France trips, day tours, stays, and local experiences."
+      content="NadoTrip is a bilingual European travel marketplace for curated trips, day tours, experiences, tickets, stays, and local adventures across France, Germany, and Italy."
     />
-    <title>NadoTrip | Curated France Travel</title>
+    <title>NadoTrip | European Travel Marketplace</title>
 
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="NadoTrip | Curated France Travel" />
-    <meta property="og:description" content="Curated city breaks, food trails, coastal escapes, and private journeys across France." />
+    <meta property="og:title" content="NadoTrip | European Travel Marketplace" />
+    <meta property="og:description" content="Curated tours, day trips, experiences, tickets, transport, and stays across France, Germany, and Italy." />
     <meta property="og:image" content="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=1200&q=80" />
     <meta name="twitter:card" content="summary_large_image" />
 
@@ -83,14 +83,7 @@
           </p>
         </div>
 
-        <div class="filters" aria-label="Trip filters">
-          <button class="filter-pill is-active" type="button" data-filter="all" data-i18n="filterAll">All</button>
-          <button class="filter-pill" type="button" data-filter="city" data-i18n="filterCity">City</button>
-          <button class="filter-pill" type="button" data-filter="food" data-i18n="filterFood">Food & wine</button>
-          <button class="filter-pill" type="button" data-filter="coast" data-i18n="filterCoast">Coast</button>
-          <button class="filter-pill" type="button" data-filter="family" data-i18n="filterFamily">Family</button>
-          <button class="filter-pill" type="button" data-filter="private" data-i18n="filterPrivate">Private</button>
-        </div>
+        <div class="filter-bar" id="filter-bar" aria-label="Product filters"></div>
 
         <div class="trip-grid" id="trip-grid" data-testid="trip-grid"></div>
       </section>
@@ -153,7 +146,7 @@
 
     <footer class="site-footer">
       <span>NadoTrip</span>
-      <span data-i18n="footerCopy">France travel sales MVP for web, tablet, and mobile.</span>
+      <span data-i18n="footerCopy">European travel marketplace MVP for web, tablet, and mobile.</span>
     </footer>
 
     <script src="app.js" defer></script>
